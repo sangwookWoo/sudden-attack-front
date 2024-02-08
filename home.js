@@ -1,9 +1,9 @@
-const swiperEl = document.querySelector('swiper-container');
-const buttonEl = document.querySelector('button');
+// const swiperEl = document.querySelector('swiper-container');
+// const buttonEl = document.querySelector('button');
 
-buttonEl.addEventListener('click', () => {
-    swiperEl.swiper.slideNext();
-  });
+// buttonEl.addEventListener('click', () => {
+//     swiperEl.swiper.slideNext();
+//   });
 
 const images = [
     "https://cdn.pixabay.com/photo/2024/01/08/15/54/defile-8495836_1280.jpg", 

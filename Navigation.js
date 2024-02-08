@@ -1,5 +1,4 @@
 const loginElement = document.getElementById('login-link');
-const singupElement = document.getElementById('signup-link');
 const writeElement = document.getElementById('write-link');
 const myStudyElement = document.getElementById('my-study-link');
 const myPageElement = document.getElementById('my-page-link');
@@ -17,7 +16,6 @@ const serverToken = 'abcdefghijklmnop';
 if (isLoggined && clientToken === serverToken) {
     // 로그인 상태일 때
     loginElement.classList.add('hidden');
-    singupElement.classList.add('hidden');
 
     writeElement.classList.remove('hidden');
     myStudyElement.classList.remove('hidden');
@@ -26,7 +24,6 @@ if (isLoggined && clientToken === serverToken) {
 } else {
     // 로그인 상태가 아닐 때
     loginElement.classList.remove('hidden');
-    singupElement.classList.remove('hidden');
 
     writeElement.classList.add('hidden');
     myStudyElement.classList.add('hidden');

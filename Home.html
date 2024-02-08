@@ -22,8 +22,7 @@
                     <li><a href="markdown-editor.html" class="hover:text-gray-300" id="write-link">오늘의 글쓰기</a></li>
                     <li><a href="#" class="hover:text-gray-300" id="my-study-link">나의 스터디</a></li>
                     <li><a href="#" class="hover:text-gray-300" id="my-page-link">마이페이지</a></li>
-                    <li><a href="login.html" class="hover:text-gray-300" id="login-link">로그인</a></li>
-                    <li><a href="#" class="hover:text-gray-300" id="signup-link">회원가입</a></li>
+                    <li><a href="login.html" class="hover:text-gray-300" id="login-link">회원가입/로그인</a></li>
                     <li class="hover:text-gray-300" id="logout">로그아웃</li>
                 </ul>
             </nav>
@@ -31,16 +30,17 @@
     </header>
     <script src="navigation.js"></script>
 
-    <main>
-        <!-- 슬라이더 -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-        <swiper-container id="image-slider" slides-per-view="1" mx-auto relative>
-            <!-- 이미지 동적 추가 -->
-        </swiper-container>
-        <!-- <button id="prevButton"
-            class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-l-md">이전</button>
-        <button id="nextButton"
-            class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-r-md">다음</button> -->
+    <main class="min-h-screen flex items-center justify-center">
+        <!-- 카드 1 -->
+        <div class="grid grid-cols-1">
+            <div class="max-w-sm bg-white rounded-lg shadow-lg overflow-hidden">
+                <img class="w-full h-48 object-cover"
+                    src="https://cdn.pixabay.com/photo/2024/01/08/15/54/defile-8495836_1280.jpg" alt="카드 이미지">
+                <div class="p-6">
+                    <a href="path/to/your/other/page.html" class="text-xl font-semibold mb-2">지금 스터디를 만들어보세요!</a>
+                </div>
+            </div>
+        </div>
     </main>
     <script src="home.js"></script>
 
