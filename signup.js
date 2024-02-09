@@ -1,6 +1,7 @@
 const signupButton = document.getElementById('signup-button');
 
-signupButton.addEventListener('click', function () {
+
+function signup() {
     const name = document.getElementById('name').value.trim();
     const username = document.getElementById('nickname').value.trim();
     const password = document.getElementById('password').value;
@@ -34,6 +35,10 @@ signupButton.addEventListener('click', function () {
 
     alert('회원가입이 성공적으로 완료되었습니다.');
     window.location.href = "login.html";
+}
+
+signupButton.addEventListener('click', function () {
+    signup()
 });
 
 // 엔터키 관련 입력

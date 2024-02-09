@@ -1,9 +1,9 @@
 const loginButton = document.getElementById('login-button');
-const elementId = document.getElementById('userid');
+const elementEmail = document.getElementById('user-email');
 const elementPassword = document.getElementById('password');
 
 function login() {
-    const clientId = elementId.value;
+    const clientId = elementEmail.value;
     const clientPassword = elementPassword.value;
 
     // 받은 아이디로 api 때려서, 받은 거 확인해서 열어서, 서버에서 받은 비밀번호 확인하기
@@ -20,13 +20,13 @@ function login() {
     }
 }
 
+// 엔터키 관련 로직
 function handleKeyPress(event) {
     // 키 코드가 13인 경우 (Enter 키)
     if (event.keyCode === 13) {
         loginButton.click();
     }
 }
-
 document.addEventListener('keypress', handleKeyPress);
 loginButton.addEventListener('click', function() {
     login()
