@@ -9,12 +9,31 @@ const logOutElement = document.getElementById('logout')
 // 로그인 상태에 따라 헤더 업데이트
 // 로그인 상태
 const isLoggined = localStorage.getItem('isLoggined');
-
-// 로컬 스토리지에 저장된 토큰 / 서버에서 전달 받은 토큰
 const clientToken = localStorage.getItem('clientToken'); 
-const serverToken = 'abcdefghijklmnop';
 
-if (isLoggined && clientToken === serverToken) {
+async function getProtectedResource() {
+    const clientToken = localStorage.getItem('clientToken'); 
+    const url = 'http://127.0.0.1:8000/protected-resource/';
+
+    try {
+        const response = await fetch(url, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${clientToken}`
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+if (isLoggined && getProtectedResource()) {
     // 로그인 상태일 때
     loginElement.classList.add('hidden');
 
@@ -39,3 +58,5 @@ logOutElement.addEventListener('click', function() {
     alert('로그아웃 되었습니다.')
     window.location.href = "Home.html";
 });
+
+

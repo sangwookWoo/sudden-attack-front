@@ -2,35 +2,33 @@ const loginButton = document.getElementById('login-button');
 const elementEmail = document.getElementById('user-email');
 const elementPassword = document.getElementById('password');
 
-function login() {
+async function login() {
     const clientEmail = elementEmail.value;
     const clientPassword = elementPassword.value;
-    
+
     const formData = new FormData();
     formData.append('username', clientEmail);
     formData.append('password', clientPassword);
+    
+    try {
+        const response = await fetch('http://127.0.0.1:8000/login/', {
+            method: 'POST',
+            body: formData
+        });
 
-    console.log(formData)
-    fetch('http://127.0.0.1:8000/login/', {
-        method: 'POST',
-        body: formData,
-    })
-    .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
-        return response.json();
-    })
-    .then(userData => {
-        console.log(userData)
-        localStorage.setItem('isLoggined', true)
-        // localStorage.setItem('clientToken', 'abcdefghijklmnop')
+
+        const serverTokenInfo = await response.json();
+        const serverToken = serverTokenInfo.access_token;
+        localStorage.setItem('isLoggined', true);
+        localStorage.setItem('clientToken', serverToken)
         window.location.href = "home.html";
-    })
-    .catch(error => {
+    } catch (error) {
         alert('이메일 또는 비밀번호가 잘못되었습니다.');
-        console.log(error)
-    });
+        console.log(error);
+    }
 }
 
 // 엔터키 관련 로직
