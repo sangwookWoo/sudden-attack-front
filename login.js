@@ -10,7 +10,7 @@ function login() {
     const serverPassword = "1224"
 
     if (clientPassword === serverPassword) {
-        window.location.href = "Home.html";
+        window.location.href = "home.html";
 
         // jwt
         localStorage.setItem('isLoggined', true)
