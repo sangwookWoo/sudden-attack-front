@@ -3,21 +3,34 @@ const elementEmail = document.getElementById('user-email');
 const elementPassword = document.getElementById('password');
 
 function login() {
-    const clientId = elementEmail.value;
+    const clientEmail = elementEmail.value;
     const clientPassword = elementPassword.value;
+    
+    const formData = new FormData();
+    formData.append('username', clientEmail);
+    formData.append('password', clientPassword);
 
-    // 받은 아이디로 api 때려서, 받은 거 확인해서 열어서, 서버에서 받은 비밀번호 확인하기
-    const serverPassword = "1224"
-
-    if (clientPassword === serverPassword) {
-        window.location.href = "home.html";
-
-        // jwt
+    console.log(formData)
+    fetch('http://127.0.0.1:8000/login/', {
+        method: 'POST',
+        body: formData,
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(userData => {
+        console.log(userData)
         localStorage.setItem('isLoggined', true)
-        localStorage.setItem('clientToken', 'abcdefghijklmnop')
-    } else {
-        alert("아이디 또는 비밀번호가 잘못되었습니다.");
-    }
+        // localStorage.setItem('clientToken', 'abcdefghijklmnop')
+        window.location.href = "home.html";
+    })
+    .catch(error => {
+        alert('이메일 또는 비밀번호가 잘못되었습니다.');
+        console.log(error)
+    });
 }
 
 // 엔터키 관련 로직

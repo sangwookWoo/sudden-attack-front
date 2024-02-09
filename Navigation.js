@@ -5,6 +5,7 @@ const myPageElement = document.getElementById('my-page-link');
 const logOutElement = document.getElementById('logout')
 
 
+
 // 로그인 상태에 따라 헤더 업데이트
 // 로그인 상태
 const isLoggined = localStorage.getItem('isLoggined');
