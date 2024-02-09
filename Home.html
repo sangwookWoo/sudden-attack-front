@@ -5,46 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>기습공격</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="home.css" rel="stylesheet">
 </head>
 
-
 <body>
-    <header class="py-4">
-        <div class="container mx-auto flex flex-col lg:flex-row justify-between items-center px-4">
-            <a href="home.html" class="mb-4 lg:mb-0">
-                <span class="hover:text-gray-700 text-xl sm:text-3xl font-bold">Study With Me</span>
-            </a>
-            <!-- 네비게이션 바 -->
-            <nav class="overflow-x-auto whitespace-nowrap">
-                <ul id="nav-links" class="flex justify-end space-x-6">
-                    <li><a href="markdown-editor.html" class="hover:text-gray-700" id="write-link">오늘의 글쓰기</a></li>
-                    <li><a href="#" class="hover:text-gray-700" id="my-study-link">나의 스터디</a></li>
-                    <li><a href="#" class="hover:text-gray-700" id="my-page-link">마이페이지</a></li>
-                    <li><a href="login.html" class="hover:text-gray-700" id="login-link">회원가입/로그인</a></li>
-                    <li class="hover:text-gray-700" id="logout">로그아웃</li>
-                </ul>
-            </nav>
-        </div>
-        <!-- 실선 추가 -->
-        <div class="m-4 border-t border-gray-300"></div>
+    <header>
+        <a href="home.html" class="logo">Study With Me</a>
+        <nav>
+            <ul>
+                <li><a href="login.html" id="login-link">로그인</a></li>
+                <li><a href="#" id="logout">로그아웃</a></li>
+            </ul>
+        </nav>
     </header>
-    <script src="navigation.js"></script>
 
-    <main class="min-h-screen flex flex-col items-center justify-center">
-        <div class="flex-container space-between">
-            <div class="flex-item color-yellow">1</div>
-            <div class="flex-item color-yellow">2</div>
-            <div class="flex-item color-yellow">3</div>
-            <div class="flex-item color-yellow">4</div>
-        </div>
+    <main>
+
+        <nav id="nav-menu" class="nav-menu">
+            <ul>
+                <li><a href="#" id="study-group-link">스터디 그룹</a></li>
+                <li><a href="#" id="my-page-link">마이 페이지</a></li>
+            </ul>
+        </nav>
+        <!-- 내용 -->
     </main>
-    <script src="home.js"></script>
+    <!-- <footer>
+        <p>&copy; 2024 기습공격. All Rights Reserved.</p>
+    </footer> -->
 
-    <footer class="bg-gray-800 text-white text-center py-4 fixed bottom-0 w-full">
-        <p class="text-sm">&copy; 2024 기습공격. All Rights Reserved.</p>
-    </footer>
 </body>
-
+<script src="navigation.js"></script>
 
 </html>
