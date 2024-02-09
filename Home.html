@@ -12,12 +12,15 @@
 <body class="bg-gray-100">
     <!-- 네비게이션 바  -->
     <header class="bg-gray-900 text-white py-4">
-        <div class="container mx-auto flex justify-between items-center px-4">
+        <div class="container mx-auto flex flex-col lg:flex-row justify-between items-center px-4">
 
-            <a href="home.html">
-                <span class="hover:text-gray-300 text-3xl font-bold">기습공격</span>
+            <!-- 기습공격 텍스트 -->
+            <a href="home.html" class="mb-4 lg:mb-0">
+                <span class="hover:text-gray-300 text-xl sm:text-3xl font-bold">기습공격</span>
             </a>
-            <nav>
+
+            <!-- 네비게이션 바 -->
+            <nav class="overflow-x-auto whitespace-nowrap">
                 <ul id="nav-links" class="flex space-x-6">
                     <li><a href="markdown-editor.html" class="hover:text-gray-300" id="write-link">오늘의 글쓰기</a></li>
                     <li><a href="#" class="hover:text-gray-300" id="my-study-link">나의 스터디</a></li>
