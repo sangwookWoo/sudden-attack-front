@@ -20,10 +20,10 @@ async function login() {
             throw new Error('Network response was not ok');
         }
 
-        const serverTokenInfo = await response.json();
-        const serverToken = serverTokenInfo.access_token;
+        const { access_token, refresh_token } = await response.json();
         localStorage.setItem('isLoggined', true);
-        localStorage.setItem('clientToken', serverToken)
+        localStorage.setItem('clientToken', access_token);
+        localStorage.setItem('refreshToken', refresh_token);
         window.location.href = "home.html";
     } catch (error) {
         alert('이메일 또는 비밀번호가 잘못되었습니다.');
@@ -40,5 +40,5 @@ function handleKeyPress(event) {
 }
 document.addEventListener('keypress', handleKeyPress);
 loginButton.addEventListener('click', function() {
-    login()
+    login();
 });
