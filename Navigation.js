@@ -1,10 +1,11 @@
-// navBar 엘리먼트
-const loginElement = document.getElementById('login-link');
-const studyGroupElement = document.getElementById('study-group-link');
-const myPageElement = document.getElementById('my-page-link');
-const logOutElement = document.getElementById('logout');
 
-// 로그인 상태 확인
+// navBar 엘리먼트
+const studyGroupElements = document.querySelectorAll('.study-group');
+const myStudyElements = document.querySelectorAll('.my-study');
+const myPageElements = document.querySelectorAll('.my-page');
+const loginElements = document.querySelectorAll('.login');
+
+
 const isLoggined = localStorage.getItem('isLoggined');
 
 // 로그인 후 이용 가능 서비스
@@ -17,48 +18,50 @@ function handleLinkClick(event, link) {
         alert('로그인 후 이용 가능한 서비스입니다.');
     }
 }
-
-// 로그인 후 이용 가능한 서비스
-studyGroupElement.addEventListener('click', function(event) {
-    handleLinkClick(event, this);
+studyGroupElements.forEach(element => {
+    element.addEventListener('click', handleLinkClick);
+})
+myStudyElements.forEach(element => {
+    element.addEventListener('click', handleLinkClick);
 });
-myPageElement.addEventListener('click', function() {
-    handleLinkClick(event, this);
+myPageElements.forEach(element => {
+    element.addEventListener('click', handleLinkClick);
 });
 
 
-// 로그아웃 버튼 클릭 시 처리
-logOutElement.addEventListener('click', function() {
-    // 로그아웃 처리: 모든 토큰 삭제
+// 로그아웃 버튼 클릭 시 처리 함수
+function handleLogOut() {
     localStorage.removeItem('isLoggined');
     localStorage.removeItem('clientToken');
     localStorage.removeItem('refreshToken');
-    
-    // 홈 페이지로 이동
+    alert('성공적으로 로그아웃 되었습니다.');
     window.location.href = "home.html";
-});
-
-// 로그아웃 버튼 클릭 시 처리
-logOutElement.addEventListener('click', function() {
-    // 로그아웃 처리: 모든 토큰 삭제
-    localStorage.removeItem('isLoggined');
-    localStorage.removeItem('clientToken');
-    localStorage.removeItem('refreshToken');
-    
-    // 홈 페이지로 이동
-    alert('성공적으로 로그아웃 되었습니다.')
-    window.location.href = "home.html";
-});
+}
 
 
 // 로그인 상태에 따라 네비게이션 표시 조정
 if (isLoggined) {
-    console.log('로그인중');
-    // 로그인 상태일 때
-    loginElement.classList.add('hidden');
-    logOutElement.classList.remove('hidden');
-} else {
-    // 로그인 상태가 아닐 때
-    loginElement.classList.remove('hidden');
-    logOutElement.classList.add('hidden');
+    loginElements.forEach(loginElement => {
+        loginElement.textContent = '로그아웃';
+        loginElement.classList.add('text-base', 'font-semibold', 'leading-7', 'text-gray-900', 'ml-10');
+        loginElement.style.fontSize = '14px'
+    });
 }
+
+loginElements.forEach(loginElement => {
+    if (loginElement.textContent === '로그아웃') {
+        loginElement.addEventListener('click', handleLogOut);
+    }
+})
+
+// 모바일 메뉴 버튼 클릭
+const menuContainer = document.getElementById('mobile-menu-container');
+const closeButton = document.getElementById('close-menu-button');
+const openbutton = document.getElementById('open-mobile-menu');
+
+closeButton.addEventListener('click', function() {
+    menuContainer.style.display = 'none'; 
+});
+openbutton.addEventListener('click', function() {
+    menuContainer.style.display = 'block'; 
+});
