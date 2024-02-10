@@ -19,13 +19,19 @@ async function handleLinkClick(event, link) {
     }
 }
 studyGroupElements.forEach(element => {
-    element.addEventListener('click', handleLinkClick);
+    if (!isLoggined) {
+        element.addEventListener('click', handleLinkClick);
+    }
 })
 myStudyElements.forEach(element => {
-    element.addEventListener('click', handleLinkClick);
+    if (!isLoggined) {
+        element.addEventListener('click', handleLinkClick);
+    }
 });
 myPageElements.forEach(element => {
-    element.addEventListener('click', handleLinkClick);
+    if (!isLoggined){
+        element.addEventListener('click', handleLinkClick);
+    }
 });
 
 
