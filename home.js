@@ -84,3 +84,5 @@ recentStudyGroups.forEach(recentStudyGroup => {
     const {studyName, description, studyMemberCount} = recentStudyGroup;
     showStudyGroups(recentStudyTbody, studyName, description, studyMemberCount)
 })
+
+// 글자 수 제한 필요
