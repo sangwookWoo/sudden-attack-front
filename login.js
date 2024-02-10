@@ -5,7 +5,6 @@ const elementPassword = document.getElementById('password');
 async function login() {
     const clientEmail = elementEmail.value;
     const clientPassword = elementPassword.value;
-
     const formData = new FormData();
     formData.append('username', clientEmail);
     formData.append('password', clientPassword);
@@ -24,7 +23,6 @@ async function login() {
         localStorage.setItem('isLoggined', true);
         localStorage.setItem('clientToken', access_token);
         localStorage.setItem('refreshToken', refresh_token);
-
         window.location.href = "home.html";
     } catch (error) {
         alert('이메일 또는 비밀번호가 잘못되었습니다.');

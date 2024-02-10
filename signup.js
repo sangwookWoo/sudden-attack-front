@@ -53,7 +53,7 @@ async function signup() {
     }
 }
 // 엔터키 관련 입력
-function handleKeyPress(event) {
+async function handleKeyPress(event) {
     // 키 코드가 13인 경우 (Enter 키)
     if (event.keyCode === 13) {
         signupButton.click();
@@ -62,6 +62,3 @@ function handleKeyPress(event) {
 
 document.addEventListener('keypress', handleKeyPress);
 signupButton.addEventListener('click', signup);
-
-
-

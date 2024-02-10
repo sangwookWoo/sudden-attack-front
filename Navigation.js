@@ -9,7 +9,7 @@ const loginElements = document.querySelectorAll('.login');
 const isLoggined = localStorage.getItem('isLoggined');
 
 // 로그인 후 이용 가능 서비스
-function handleLinkClick(event, link) {
+async function handleLinkClick(event, link) {
     event.preventDefault();
     
     if (isLoggined) {
@@ -30,7 +30,7 @@ myPageElements.forEach(element => {
 
 
 // 로그아웃 버튼 클릭 시 처리 함수
-function handleLogOut() {
+async function handleLogOut() {
     localStorage.removeItem('isLoggined');
     localStorage.removeItem('clientToken');
     localStorage.removeItem('refreshToken');
