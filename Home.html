@@ -43,7 +43,7 @@
             </div>
         </nav>
         <!-- Mobile menu, show/hide based on menu open state. -->
-        <div id="mobile-menu-container" class="lg:hidden" role="dialog" aria-modal="true">
+        <div id="mobile-menu-container" class="lg:hidden hidden" role="dialog" aria-modal="true">
             <!-- Background backdrop, show/hide based on slide-over state. -->
             <div class="fixed inset-0 z-10"></div>
             <div
@@ -90,68 +90,99 @@
 
     <main>
 
-        <div class="grid sm:grid-cols-2 ap-4">
-            <section class="py-6 mx-auto max-w-7xl text-xs">
-                <div class="flex items-center justify-between mb-2">
-                    <h2 class="text-xl font-semibold">인기 있는 스터디</h2>
-                    <button class="text-xs font-medium text-gray-700 underline">전체보기</button>
-                </div>
-                <div class="flex items-center gap-2">
-                    <div class="flex items-center border-t border-b py-3">
-                        <img src="https://img.freepik.com/free-photo/sculpture-girl-blue-background_1268-26897.jpg?t=st=1707548565~exp=1707552165~hmac=9c4df60f4c316fd332f39a58563f20639b0eeea6dd86152f739acc9fd979e0a3?ga=GA1.2.1154925974.1707548562&"
-                            alt="프로필" class="w-10 h-10 rounded-full">
-                        <button class="study-name ml-4">기습공격</button>
-                        <button class="description ml-5">주니어 개발자 모임</button>
+        <section>
+            <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto mt-6">
+                <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded ">
+                    <div class="rounded-t mb-0 px-4 py-3 border-0">
+                        <div class="flex flex-wrap items-center">
+                            <div class="relative w-full px-4 max-w-full flex-grow flex-1">
+                                <h3 class="font-semibold text-base text-blueGray-700">최근 인기 스터디</h3>
+                            </div>
+                            <div class="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
+                                <button
+                                    class="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                    type="button">전체보기</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="flex items-center gap-2">
-                    <div class="flex items-center border-t border-b py-3">
-                        <img src="https://img.freepik.com/free-photo/sculpture-girl-blue-background_1268-26897.jpg?t=st=1707548565~exp=1707552165~hmac=9c4df60f4c316fd332f39a58563f20639b0eeea6dd86152f739acc9fd979e0a3?ga=GA1.2.1154925974.1707548562&"
-                            alt="프로필" class="w-10 h-10 rounded-full">
-                        <button class="study-name ml-4">기습공격</button>
-                        <button class="description ml-5">주니어 개발자 모임</button>
-                    </div>
-                </div>
-                <div class="flex items-center gap-2">
-                    <div class="flex items-center border-t border-b py-3">
-                        <img src="https://img.freepik.com/free-photo/sculpture-girl-blue-background_1268-26897.jpg?t=st=1707548565~exp=1707552165~hmac=9c4df60f4c316fd332f39a58563f20639b0eeea6dd86152f739acc9fd979e0a3?ga=GA1.2.1154925974.1707548562&"
-                            alt="프로필" class="w-10 h-10 rounded-full">
-                        <button class="study-name ml-4">기습공격</button>
-                        <button class="description ml-5">주니어 개발자 모임</button>
-                    </div>
-                </div>
-            </section>
 
-            <section class="py-6 mx-auto max-w-7xl text-xs">
-                <div class="flex items-center justify-between mb-2">
-                    <h2 class="text-xl font-semibold">최근 만든 스터디</h2>
-                    <button class="text-xs font-medium text-gray-700 underline">전체보기</button>
-                </div>
-                <div class="flex items-center gap-2">
-                    <div class="flex items-center border-t border-b py-3">
-                        <img src="https://img.freepik.com/free-photo/sculpture-girl-blue-background_1268-26897.jpg?t=st=1707548565~exp=1707552165~hmac=9c4df60f4c316fd332f39a58563f20639b0eeea6dd86152f739acc9fd979e0a3?ga=GA1.2.1154925974.1707548562&"
-                            alt="프로필" class="w-10 h-10 rounded-full">
-                        <button class="study-name ml-4">기습공격</button>
-                        <button class="description ml-5">주니어 개발자 모임</button>
+                    <div class="block w-full overflow-x-auto">
+                        <table class="items-center bg-transparent w-full border-collapse ">
+                            <thead>
+                                <tr>
+                                    <th
+                                        class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left w-1/5 text-center">
+                                        스터디명
+                                    </th>
+                                    <th
+                                        class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left w-3/5 text-center">
+                                        소개
+                                    </th>
+                                    <th
+                                        class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left w-1/5 text-center">
+                                        스터디 회원 수
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="hot-study-body">
+                                <!-- 동적할당 -->
+                            </tbody>
+
+                        </table>
                     </div>
                 </div>
-                <div class="flex items-center gap-2">
-                    <div class="flex items-center border-t border-b py-3">
-                        <img src="https://img.freepik.com/free-photo/sculpture-girl-blue-background_1268-26897.jpg?t=st=1707548565~exp=1707552165~hmac=9c4df60f4c316fd332f39a58563f20639b0eeea6dd86152f739acc9fd979e0a3?ga=GA1.2.1154925974.1707548562&"
-                            alt="프로필" class="w-10 h-10 rounded-full">
-                        <button class="study-name ml-4">기습공격</button>
-                        <button class="description ml-5">주니어 개발자 모임</button>
+            </div>
+        </section>
+
+        <section>
+            <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto mt-6">
+                <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded ">
+                    <div class="rounded-t mb-0 px-4 py-3 border-0">
+                        <div class="flex flex-wrap items-center">
+                            <div class="relative w-full px-4 max-w-full flex-grow flex-1">
+                                <h3 class="font-semibold text-base text-blueGray-700">최근 생성된 스터디</h3>
+                            </div>
+                            <div class="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
+                                <button
+                                    class="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                    type="button">전체보기</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="block w-full overflow-x-auto">
+                        <table class="items-center bg-transparent w-full border-collapse ">
+                            <thead>
+                                <tr>
+                                    <th
+                                        class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left w-1/5 text-center">
+                                        스터디명
+                                    </th>
+                                    <th
+                                        class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left w-3/5 text-center">
+                                        소개
+                                    </th>
+                                    <th
+                                        class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left w-1/5 text-center">
+                                        스터디 회원 수
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="recent-study-body">
+                                <!-- 동적할당 -->
+                            </tbody>
+
+                        </table>
                     </div>
                 </div>
-                <div class="flex items-center gap-2">
-                    <div class="flex items-center border-t border-b py-3">
-                        <img src="https://img.freepik.com/free-photo/sculpture-girl-blue-background_1268-26897.jpg?t=st=1707548565~exp=1707552165~hmac=9c4df60f4c316fd332f39a58563f20639b0eeea6dd86152f739acc9fd979e0a3?ga=GA1.2.1154925974.1707548562&"
-                            alt="프로필" class="w-10 h-10 rounded-full">
-                        <button class="study-name ml-4">기습공격</button>
-                        <button class="description ml-5">주니어 개발자 모임</button>
-                    </div>
-                </div>
-            </section>
+            </div>
+        </section>
+
+
+        <script src="home.js"></script>
+        <!-- <div class="grid grid-cols-[max-content_1fr] gap-x-4 py-4"> -->
     </main>
 </body>
 
