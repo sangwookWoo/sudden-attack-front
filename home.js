@@ -87,37 +87,41 @@ recentStudyGroups.forEach(recentStudyGroup => {
 
 // 글자 수 제한 필요
 
-
-// 유저 참여 스터디
-const userStudyGroups = [
-    {
-        studyName: '기습공격',
-        recentPromise: '2024-02-31 연초파티',
-        recentUpdateBoard: '우상욱 - 오늘 너무 힘들었다.',
-    },
-    {
-        studyName: '이병호와 아이들',
-        recentPromise: '2024-03-02 프론트엔드 도서 읽기 모임',
-        recentUpdateBoard: '이병호 - 스페인 개꿀ㅋㅋ',
-    },
-    {
-        studyName: '우상욱과 아이들',
-        recentPromise: '2024-03-08 방문 두들기기',
-        recentUpdateBoard: '김길동 - 숨쉬기가 힘드네',
-    },
-    {
-        studyName: '윤규헌과 아이들',
-        recentPromise: '2024-12-01 연말파티',
-        recentUpdateBoard: '윤규헌 - 잠을 안잤습니다',
-    },
-    {
-        studyName: '노인 모임',
-        recentPromise: '2024-07-01 양로원 고스톱',
-        recentUpdateBoard: '김김동 - 오늘 김치찌개',
-    },
-]
-const userStudyTbody = document.getElementById('user-study-body');
-userStudyGroups.forEach(userStudyGroup => {
+if (isLoggined) {
+    // 유저 참여 스터디
+    const userStudyGroups = [
+        {
+            studyName: '기습공격',
+            recentPromise: '2024-02-31 연초파티',
+            recentUpdateBoard: '우상욱 - 오늘 너무 힘들었다.',
+        },
+        {
+            studyName: '이병호와 아이들',
+            recentPromise: '2024-03-02 프론트엔드 도서 읽기 모임',
+            recentUpdateBoard: '이병호 - 스페인 개꿀ㅋㅋ',
+        },
+        {
+            studyName: '우상욱과 아이들',
+            recentPromise: '2024-03-08 방문 두들기기',
+            recentUpdateBoard: '김길동 - 숨쉬기가 힘드네',
+        },
+        {
+            studyName: '윤규헌과 아이들',
+            recentPromise: '2024-12-01 연말파티',
+            recentUpdateBoard: '윤규헌 - 잠을 안잤습니다',
+        },
+        {
+            studyName: '노인 모임',
+            recentPromise: '2024-07-01 양로원 고스톱',
+            recentUpdateBoard: '김김동 - 오늘 김치찌개',
+        },
+    ]
+    const userStudyTbody = document.getElementById('user-study-body');
+    userStudyGroups.forEach(userStudyGroup => {
     const {studyName, recentPromise, recentUpdateBoard} = userStudyGroup;
     showStudyGroups(userStudyTbody, studyName, recentPromise, recentUpdateBoard)
 })
+} else {
+    const userStudy = document.getElementById('user-study');
+    userStudy.style.display = 'none';
+}
