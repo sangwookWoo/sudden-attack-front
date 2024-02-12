@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyWithMe | 스터디 생성</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <h1 class="py-5 text-lg font-bold text-center">스터디 생성</h1>
+        <div class=" py-8 px-7 rounded-md bg-white">
+            <form class="" action="" method=" POST">
+                <div class="grid md:grid-cols-2 grid-cols-1 gap-6">
+                    <div class="md:col-span-2">
+                        <label for="study-description"
+                            class="float-left block  font-bold text-sm ml-1 mb-2.5">스터디명</label>
+                        <input type="text" id="study-name" placeholder="영문, 숫자, 한글 허용(특수문자 불가능)"
+                            class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-700 text-sm">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="study-description"
+                            class="float-left block  font-bold text-sm ml-1 mb-2.5">간단소개</label>
+                        <textarea id="study-description" rows="2" cols="" placeholder="20자 이내"
+                            class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-700 text-sm"></textarea>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="study-category" class="float-left block  font-bold text-sm ml-1 mb-2.5">카테고리</label>
+                        <select id="study-category"
+                            class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-700 text-sm">
+                            <option value="" disabled selected>카테고리 선택</option>
+                            <option value="Option-1">개발</option>
+                            <option value="Option-2">디자인</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="study-profile-icon" class="float-left block font-bold text-sm ml-1">스터디
+                            아이콘</label>
+                        <input type="file" id="study-profile-icon"
+                            class="peer block w-full appearance-none border-none bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 ml-1 text-sm">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="study-description-detail"
+                            class="float-left block  font-bold text-sm ml-1 mb-2.5">상세소개</label>
+                        <textarea id="study-description-detail" rows="5" cols="" placeholder="100자 이내"
+                            class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-700 text-sm"></textarea>
+                    </div>
+                    <div class="md:col-span-2 flex justify-center">
+                        <button id='create-study'
+                            class="py-1 px-4 text-base font-medium rounded bg-gray-200 transition text-xs hover:bg-indigo-300 transition duration-300">스터디
+                            생성</button>
+                    </div>
+                </div><!-- Grid End -->
+            </form>
+
+
+        </div>
+    </main>
+    <script src="create-study.js"></script>
+</body>
+
+</html>

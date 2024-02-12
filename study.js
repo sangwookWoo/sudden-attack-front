@@ -151,3 +151,26 @@ $('#pagination').pagination({
         displayData(pagination.pageNumber);
     },
 });
+
+// 스터디 생성 모달
+document.getElementById("open-create-study").addEventListener("click", function () {
+    document.getElementById("modal-overlay").style.display = "flex";
+});
+
+// 모달 외부를 클릭하면 모달 닫기
+document.getElementById("modal-overlay").addEventListener("click", function (event) {
+    if (event.target === this) {
+        this.style.display = "none";
+    }
+});
+
+function closeModal() {
+    document.getElementById("modal-overlay").style.display = "none";
+}
+
+// ESC 키 눌렀을 때 모달 닫기
+window.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        closeModal();
+    }
+});

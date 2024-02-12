@@ -9,6 +9,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.min.js"></script>
+    <style>
+        /* 스타일링 */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -99,15 +120,21 @@
                         <p class="font-bold mb-1 text-sm uppercase">Future</p>
                         <p class="text-3xl mb-3 font-bold">더 나은 미래를 위해</p>
                         <p class="text-l mb-10 leading-none">아래에서 스터디를 찾거나, 만들어보세요!</p>
-                        <a href="#"
+                        <button id="open-create-study"
                             class="bg-purple-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">스터디
-                            만들기</a>
+                            만들기</button>
                     </div>
                 </div> <!-- container -->
                 <br>
             </div>
         </section>
-
+        <!-- 스터디 생성 모달 -->
+        <div class="modal-overlay" id="modal-overlay">
+            <div class="modal-content" style="width: 90%; height: 80%;">
+                <!-- iframe으로 로드할 페이지 -->
+                <iframe src="create-study.html" style="width: 100%; height: 100%;" frameborder="0"></iframe>
+            </div>
+        </div>
         <section>
             <div id="study-list" class="w-full mb-12 xl:mb-0 px-4 mx-auto">
                 <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded ">
