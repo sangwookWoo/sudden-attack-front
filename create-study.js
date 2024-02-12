@@ -30,4 +30,6 @@ document.getElementById("create-study").addEventListener("click", function (even
     console.log("카테고리:", studyCategory);
     console.log("프로필 아이콘:", studyProfileIconName);
     console.log("상세소개:", studyDescriptionDetail);
+
+    alert('성공적으로 스터디를 생성했습니다')
 });
