@@ -34,7 +34,7 @@
 
 <body>
     <header class="bg-white">
-        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <nav class="mx-auto flex max-full items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div class="flex lg:flex-1">
                 <a href="home.html" class="-m-1.5 p-1.5">
                     <span class="sr-only">Your Company</span>
@@ -122,20 +122,17 @@
 
     <body>
         <section class="bg-white dark:bg-gray-900">
-            <div class="container mx-auto">
-                <div class="bg-cover bg-center h-auto text-white py-24 px-10 object-fill"
-                    style="background-image: url(https://images.unsplash.com/photo-1496065187959-7f07b8353c55?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
-                    <div class="md:w-1/2">
-                        <p class="font-bold mb-1 text-sm uppercase">Future</p>
-                        <p class="text-3xl mb-3 font-bold">더 나은 미래를 위해</p>
-                        <p class="text-l mb-10 leading-none">아래에서 스터디를 찾거나, 만들어보세요!</p>
-                        <button id="open-create-study"
-                            class="bg-purple-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">스터디
-                            만들기</button>
-                    </div>
-                </div> <!-- container -->
-                <br>
-            </div>
+            <div class="bg-cover bg-center h-auto text-white py-24 px-10 max-w-full"
+                style="background-image: url(https://images.unsplash.com/photo-1496065187959-7f07b8353c55?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                <div class="md:w-1/2">
+                    <p class="font-bold mb-1 text-sm uppercase">Future</p>
+                    <p class="text-3xl mb-3 font-bold">더 나은 미래를 위해</p>
+                    <p class="text-l mb-10 leading-none">아래에서 스터디를 찾거나, 만들어보세요!</p>
+                    <button id="open-create-study"
+                        class="bg-purple-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">스터디
+                        만들기</button>
+                </div>
+            </div> <!-- container -->
         </section>
         <!-- 스터디 생성 모달 -->
         <div class="modal-overlay" id="modal-overlay">

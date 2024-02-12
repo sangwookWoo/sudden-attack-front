@@ -10,7 +10,7 @@
 
 <body>
     <header class="bg-white">
-        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <nav class="mx-auto flex max-w-full items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div class="flex lg:flex-1">
                 <a href="home.html" class="-m-1.5 p-1.5">
                     <span class="sr-only">Your Company</span>
@@ -100,36 +100,28 @@
     <main>
         <section>
             <div class="sliderAx h-auto">
-                <div id="slider-1" class="container mx-auto">
-                    <div class="bg-cover bg-top  h-auto text-white py-24 px-10 object-fill"
-                        style="background-image: url(https://images.unsplash.com/photo-1503424160383-57de83bd6fb2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
-
-                        <p class="font-bold mb-1 text-sm uppercase">Slow And Steady</p>
-                        <p class="text-3xl mb-3 font-bold">지금 우리 스터디는</p>
-                        <p class="text-l mb-10 leading-none">스터디원들과 오늘 하루를 공유하세요!</p>
-                        <a href="#"
-                            class="bg-purple-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">우리
-                            스터디 보러가기</a>
-
-                    </div> <!-- container -->
-                    <br>
+                <div id="slider-1" class="bg-cover bg-top  h-auto text-white py-24 px-10 object-fill max-w-full"
+                    style="background-image: url(https://images.unsplash.com/photo-1503424160383-57de83bd6fb2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                    <p class="font-bold mb-1 text-sm uppercase">Slow And Steady</p>
+                    <p class="text-3xl mb-3 font-bold">지금 우리 스터디는</p>
+                    <p class="text-l mb-10 leading-none">스터디원들과 오늘 하루를 공유하세요!</p>
+                    <a href="#"
+                        class="bg-purple-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">우리
+                        스터디 보러가기</a>
                 </div>
-                <div id="slider-2" class="container mx-auto">
-                    <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill"
-                        style="background-image: url(https://images.unsplash.com/photo-1611241893603-3c359704e0ee?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
-                        <div class="md:w-1/2">
-                            <p class="font-bold mb-1 text-sm uppercase">Create</p>
-                            <p class="text-3xl mb-3 font-bold">새로운 스터디를</p>
-                            <p class="text-l mb-10 leading-none">동료들을 모아서, 함께 성장하세요!</p>
-                            <a href="study.html"
-                                class="bg-purple-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">스터디
-                                찾기/만들기</a>
-                        </div>
-                    </div> <!-- container -->
-                    <br>
+                <div id="slider-2" class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill max-w-full"
+                    style="background-image: url(https://images.unsplash.com/photo-1611241893603-3c359704e0ee?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                    <div class="md:w-1/2">
+                        <p class="font-bold mb-1 text-sm uppercase">Create</p>
+                        <p class="text-3xl mb-3 font-bold">새로운 스터디를</p>
+                        <p class="text-l mb-10 leading-none">동료들을 모아서, 함께 성장하세요!</p>
+                        <a href="study.html"
+                            class="bg-purple-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">스터디
+                            찾기/만들기</a>
+                    </div>
                 </div>
             </div>
-            <div class="flex justify-between w-12 mx-auto pb-2">
+            <div class="flex justify-between w-12 mx-auto pb-2 py-4">
                 <button id="sButton1" onclick="sliderButton1()" class="bg-purple-400 rounded-full w-4 pb-2 "></button>
                 <button id="sButton2" onclick="sliderButton2() " class="bg-purple-400 rounded-full w-4 p-2"></button>
             </div>
